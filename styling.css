@@ -1,0 +1,233 @@
+#orange {grid-area: a;}
+#nina {grid-area: b;}
+#vt {grid-area: c;}
+#lake {grid-area: d;}
+.image {grid-area: img;}
+.text {grid-area: txt;}
+.head {grid-area: head;}
+
+#orange, #nina, #vt, #lake {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'a'
+    'b'
+    'c'
+    'd';
+    gap: 0.7em;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'img'
+    'head'
+    'txt';
+}
+
+.mainnav {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background-color: rgb(207, 226, 255);
+    margin-left: 1%;
+}
+
+#port {width: 20%;}
+
+#port > li{padding-left: 3%;}
+
+.mainnav > li {padding: 7%; padding-left: 2%;}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: none;
+    margin-bottom: 4%;
+    
+}
+
+#nav > li {padding: 3%;}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#darkrm {
+    width: 80%;
+    background-color: rgb(225, 225, 225);
+    margin-left: 8%;
+    padding: 1.6%;
+}
+
+#container > a:hover {opacity: 75%;}
+
+a:link {
+    text-decoration: none;
+    color: rgb(2, 2, 102);
+}
+
+a:hover {text-decoration: underline;}
+a:visited {color:rgb(81, 0, 0);}
+article {padding: 1em;}
+.text, .head {margin-left: 5%;}
+.head {margin-bottom: 1%;}
+.text {padding-bottom: 15%;}
+.tall > .text {margin-right: 5%;}
+
+@font-face {
+    font-family: 'Chunk';
+    src: url('font/ChunkFive-Regular.woff');
+}
+
+@font-face {
+    font-family: 'Fanwood';
+    src: url('font/fanwood_text-webfont.woff');
+}
+
+h1, h2 {
+    color: rgb(2, 2, 102);
+    margin-left: 2%;
+    font-family: 'Chunk';
+    font-weight: lighter;
+    font-size: 1.3em;
+}
+
+h1 > a:hover, a:link{color: rgb(2, 2, 102);}
+a:active {color:darkslateblue;}
+
+p, li, button, footer {
+    font-family: 'Fanwood';
+    font-size: 1em;
+}
+
+h3 {
+    font-family: 'Fanwood';
+    font-size: 0.9em;
+}
+
+li {list-style-type: none;}
+
+.footer > li {
+    list-style-type: none;
+    padding: 3%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.6em;
+    margin: 3%;
+    padding-left: 4%;
+}
+
+button {
+    margin-left: 2%;
+    background-color: rgb(225, 225, 225);
+    color: rgb(2, 2, 102);
+}
+
+@media (min-width: 800px) {
+
+
+    h2 { margin-left: 5%;}
+
+    .mainnav {
+        flex-direction: row;
+        width: 210px;
+    }
+
+    #dan {padding-left: 11%;}
+
+    #darkrm {
+        width: 80%;
+        margin-left: 8%;
+        padding: 1.6%;
+    }
+
+    #nav {
+        flex-direction: row;
+        width: 100%;
+        background-color: none;
+    }
+
+    #port{ width: 180px;}
+
+    #container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      'a b'
+      'c d';
+      gap: 0.7em;
+    }
+
+    #orange, #nina, #vt, #lake {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        '  a  '
+        '  b  '
+        '  c  '
+        '  d  ';
+        gap: 0.7em;
+    }
+    
+    article {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'img'
+        'head'
+        'txt';
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom:9%;
+    }
+
+    .footer > li{
+        padding: 5.5%;
+    }
+
+}
+
+@media (min-width: 990px) {
+
+    .footer > li {
+        padding: 5%;
+        font-size: 1.3em;
+    }
+    .footer {
+        margin: none;
+    }
+
+    .mainnav {
+        flex-direction: row;
+        width: 210px;
+    }
+
+    #container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      'a b'
+      'c d';
+      gap: 0.7em;
+      margin-left: 10%;
+      margin-right: 10%;
+
+    }
+
+}
+
+@media only screen and (prefers-color-scheme: dark){
+    body {background-color: rgb(14, 24, 14);}
+    h1, p, h2, h3, li, a:link, a:hover {color:bisque;}
+    a:visited{color:burlywood;}
+    .mainnav, #nav, #darkrm {background-color: rgb(89, 84, 77)}
+    h1 > a:hover {color:rgb(157, 195, 255);}
+}
