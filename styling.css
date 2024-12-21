@@ -113,27 +113,26 @@ h3 {
 
 li {list-style-type: none;}
 
-.footer > li {
-    list-style-type: none;
-    padding: 3%;
+.footer {
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: center; 
+    flex-wrap: nowrap; 
+    margin: 0; 
+    padding: 2% 1%; 
+    text-align: center;
+    font-size: 1em;
 }
 
 .footer {
-    display: flex;
-    flex-direction: row;
+    justify-content: space-around;
     font-size: 0.6em;
-    margin: 3%;
-    padding-left: 4%;
 }
 
-button {
-    margin-left: 2%;
-    background-color: rgb(225, 225, 225);
-    color: rgb(2, 2, 102);
-}
 
 @media (min-width: 800px) {
 
+    .footer { font-size: 0.7em;}
 
     h2 { margin-left: 5%;}
 
@@ -151,9 +150,11 @@ button {
     }
 
     #nav {
-        flex-direction: row;
+        display: flex;
+        flex-direction: column;
         width: 100%;
         background-color: none;
+        margin-bottom: 1%;
     }
 
     #port{ width: 180px;}
@@ -190,21 +191,14 @@ button {
         margin-bottom:9%;
     }
 
-    .footer > li{
-        padding: 5.5%;
-    }
 
 }
 
+
 @media (min-width: 990px) {
 
-    .footer > li {
-        padding: 5%;
-        font-size: 1.3em;
-    }
-    .footer {
-        margin: none;
-    }
+    .footer { font-size: 0.8em;}
+
 
     .mainnav {
         flex-direction: row;
@@ -221,6 +215,16 @@ button {
       margin-left: 10%;
       margin-right: 10%;
 
+    }
+
+    #nav {
+        flex-direction: row;
+        width: 100%;
+        background-color: none;
+    }
+
+    .tall {
+        padding: 7%;
     }
 
 }
