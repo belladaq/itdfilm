@@ -49,11 +49,11 @@ article {
     
 }
 
-#nav > li {padding: 3%;}
+#nav > li {padding: 2%;}
 
 img {
     display: block;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -100,7 +100,7 @@ h1, h2 {
 h1 > a:hover, a:link{color: rgb(2, 2, 102);}
 a:active {color:darkslateblue;}
 
-p, li, button, footer {
+p, li, button {
     font-family: 'Fanwood';
     font-size: 1em;
 }
@@ -114,25 +114,31 @@ h3 {
 li {list-style-type: none;}
 
 .footer {
-    display: flex; 
-    justify-content: space-evenly;
-    align-items: center; 
-    flex-wrap: nowrap; 
-    margin: 0; 
-    padding: 2% 1%; 
+    font-family: 'Fanwood';
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 0.5rem;
+    width: 100%;
+    list-style: none;
+    margin: 0 auto;
     text-align: center;
-    font-size: 1em;
+    padding-bottom: 10%;
+    font-size: 0.4em;
+    padding: 1% 0;
+    padding-top: 10%;
+
 }
 
-.footer {
-    justify-content: space-around;
-    font-size: 0.6em;
-}
 
+@media (min-width: 750px) {
 
-@media (min-width: 800px) {
+    .footer { 
+        font-size: 0.6em;
+        gap: 0.6rem;
+        padding-top: 2%;
 
-    .footer { font-size: 0.7em;}
+    }
 
     h2 { margin-left: 5%;}
 
@@ -150,14 +156,23 @@ li {list-style-type: none;}
     }
 
     #nav {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        background-color: none;
-        margin-bottom: 1%;
+        display: grid;                        
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 0.5rem;                         
+        width: 100%; 
+        list-style: none;    
+        padding: 0;         
+        margin: 0 auto; 
+        text-align: center;
+        padding-bottom: 3%;
     }
 
     #port{ width: 180px;}
+    #ita {width: 150px;}
+    #holland {width: 250px}
+    #slovenia {width: 170px;}
+    #norw {width: 170px;}
+    #bd {width: 150px;}
 
     #container {
       display: grid;
@@ -166,6 +181,7 @@ li {list-style-type: none;}
       'a b'
       'c d';
       gap: 0.7em;
+      padding-bottom: 4%;
     }
 
     #orange, #nina, #vt, #lake {
@@ -190,19 +206,22 @@ li {list-style-type: none;}
         margin-right: 15%;
         margin-bottom:9%;
     }
-
-
 }
 
 
 @media (min-width: 990px) {
 
-    .footer { font-size: 0.8em;}
+    .footer { 
+        font-size: 0.7em;
+        gap: 0.6rem;
+        padding-top: 2%;
+
+    }
 
 
     .mainnav {
         flex-direction: row;
-        width: 210px;
+        width: 200px;
     }
 
     #container {
@@ -217,15 +236,26 @@ li {list-style-type: none;}
 
     }
 
-    #nav {
-        flex-direction: row;
-        width: 100%;
-        background-color: none;
-    }
+#nav {
+    display: grid;                         
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto;         
+    gap: 0.5rem;                         
+    width: 95%;                          
+    list-style: none;                   
+    padding: 0;                   
+    margin: 0 auto;                   
+    text-align: center;            
+    padding-bottom: 4%;
+    padding-right: 20%;
+}
 
-    .tall {
-        padding: 7%;
-    }
+#nav > li {
+    font-size: 0.9em;          
+    text-align: center;
+}
+
+.tall {padding: 7%;}
 
 }
 
