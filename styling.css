@@ -236,26 +236,26 @@ li {list-style-type: none;}
 
     }
 
-#nav {
-    display: grid;                         
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto auto;         
-    gap: 0.5rem;                         
-    width: 95%;                          
-    list-style: none;                   
-    padding: 0;                   
-    margin: 0 auto;                   
-    text-align: center;            
-    padding-bottom: 4%;
-    padding-right: 20%;
-}
+    #nav {
+        display: grid;                         
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto auto;         
+        gap: 0.5rem;                         
+        width: 95%;                          
+        list-style: none;                   
+        padding: 0;                   
+        margin: 0 auto;                   
+        text-align: center;            
+        padding-bottom: 4%;
+        padding-right: 20%;
+    }
 
-#nav > li {
-    font-size: 0.9em;          
-    text-align: center;
-}
+    #nav > li {
+        font-size: 0.9em;          
+        text-align: center;
+    }
 
-.tall {padding: 7%;}
+    .tall {padding: 7%;}
 
 }
 
