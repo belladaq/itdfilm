@@ -54,22 +54,20 @@ img {
 }
 
 .page-header .site-title {
-  margin: 0; /* overrides your global left margin for h1 inside the header */
+  margin: 0;
 }
 
 #darkrm.lede {
-  /* readable line length + centered card */
   max-width: 65ch;
   margin: 0.5rem auto 2rem;
   padding: 1rem 1.25rem;
 
-  /* look + type */
   background: #f5f3ef;
   border: 1px solid rgba(0,0,0,0.08);
   border-radius: 12px;
   line-height: 1.65;
   font-size: clamp(0.95rem, 2.2vw, 1.1rem);
-  text-wrap: balance;       /* safe to ignore if unsupported */
+  text-wrap: balance;
 }
 
 #container > a:hover { opacity: 0.75; }
@@ -86,11 +84,6 @@ article {padding: 1em;}
 .head {margin-bottom: 1%;}
 .text {padding-bottom: 15%;}
 .tall > .text {margin-right: 5%;}
-
-@font-face {
-    font-family: 'Chunk';
-    src: url('font/ChunkFive-Regular.woff');
-}
 
 @font-face {
     font-family: 'Fanwood';
@@ -149,7 +142,7 @@ li {list-style-type: none;}
 
     border-radius: 10px;
 
-    padding: 0.7rem 0.8rem;   /* controls box size */
+    padding: 0.7rem 0.8rem;
     margin: 0.85rem auto 1.25rem;
     margin-left: 0.65rem;
     width: fit-content;
@@ -295,6 +288,24 @@ li {list-style-type: none;}
     }
 
     .tall {padding: 7%;}
+
+    .mainnav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background: #f5f3ef;
+    border: 1px solid rgba(0,0,0,0.08);
+
+    border-radius: 10px;
+
+    padding: 0.7rem 0.8rem;
+    margin: 0.85rem auto 1.25rem;
+    margin-left: 0.65rem;
+    width: fit-content;
+    max-width: min(92vw, 50rem);
+    }
 
 }
 
